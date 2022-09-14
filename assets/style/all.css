@@ -12862,7 +12862,7 @@ p {
   .recommend .container {
     border: 1px solid #000;
   }
-  .recommend .container .card-body-text {
+  .recommend .card-body-text {
     margin-bottom: 192px;
   }
 }
@@ -12925,6 +12925,7 @@ p {
 
 .artist .swiper {
   width: 100%;
+  height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -12939,15 +12940,38 @@ p {
 .artist .swiper-slide img {
   display: block;
   width: 100%;
+  height: 232px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.artist .swiper-slide-prev,
-.artist .swiper-slide-next {
-  width: 25%;
+@media (min-width: 991px) {
+  .artist .swiper-slide img {
+    max-width: 100%;
+    height: 439px;
+  }
 }
 
-.artist .swiper-slide-active {
-  width: 50%;
+@media (min-width: 991px) {
+  .artist .swiper-slide-prev,
+  .artist .swiper-slide-next {
+    width: 25% !important;
+  }
+  .artist .swiper-slide-prev img,
+  .artist .swiper-slide-next img {
+    height: 262px !important;
+  }
+  .artist .swiper-slide-prev .img-cover,
+  .artist .swiper-slide-next .img-cover {
+    display: none !important;
+  }
+  .artist .swiper-slide-prev .swiper-body,
+  .artist .swiper-slide-next .swiper-body {
+    display: none;
+  }
+  .artist .swiper-slide-active {
+    width: 50% !important;
+  }
 }
 
 .artwork-card {

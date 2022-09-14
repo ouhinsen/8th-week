@@ -1,6 +1,10 @@
 "use strict";
 "use strict";
 
+var _Swiper;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -27,6 +31,20 @@ var swiper = new Swiper('.mySwiper', {
     }
   }
 });
+var swiper = new Swiper('.mySwiper', (_Swiper = {
+  slidesPerView: 'auto',
+  centeredSlides: true
+}, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "spaceBetween", 24), _defineProperty(_Swiper, "pagination", {
+  el: '.myswiper-pagination',
+  clickable: true
+}), _defineProperty(_Swiper, "breakpoints", {
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    centeredSlides: true
+  }
+}), _Swiper)); //瀑布流//
+
 $('.row-Masonry').imagesLoaded().progress(function () {
   $('.row-Masonry').masonry();
 });
